@@ -1,0 +1,82 @@
+﻿
+@{
+    //https://stackoverflow.com/questions/1288046/how-can-i-get-my-webapps-base-url-in-asp-net-mvc
+    string baseUrl = System.Web.HttpContext.Current.Request.Url.AbsoluteUri;
+
+
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <base href="@baseUrl" name="base" />
+
+    <link rel="stylesheet" href="~/content/bootstrap.css" />
+    <link rel="stylesheet" href="~/content/Site.css" />
+    <link rel="stylesheet" href="~/app/content/ui-grid.css" />
+    <link rel="stylesheet" href="~/app/content/angular-block-ui.css" />
+
+    @*<script src="~/app/js/angular.js"></script>*@
+    <script src="~/app/bowerjs/angular.js"></script>
+   <script src="~/app/js/ui-bootstrap.js"></script>
+    <script src="~/app/js/angular-ui-router.js"></script>
+
+    @*<script src="~/app/js/angular-animate.js"></script>*@ @*causes customfilter error*@
+    <script src="~/app/bowerjs/angular-animate/angular-animate.js"></script>
+
+     <script src="~/app/js/ui-bootstrap-tpls.js"></script>
+    <script src="~/app/bowerjs/angular-ui-grid/ui-grid.js"></script>
+    <script src="~/app/bowerjs/pdfmake/pdfmake.js"></script>
+    <script src="~/app/bowerjs/pdfmake/vfs_fonts.js"></script>
+    <script src="~/app/bowerjs/csv/csv.js"></script>
+
+    <script src="~/app/bowerjs/angular-block-ui/angular-block-ui.js"></script>
+
+    <script src="~/app/app.module.js"></script>
+    <script src="~/app/app.config.js"></script>
+    <script src="~/app/CarController.js"></script>
+    <script src="~/app/gridController.js"></script>
+
+
+</head>
+<body ng-app="uiroute" ng-controller="NavigationCtrl as vm" ng-init="vm.initializeController()" >
+@*<body ng-app="uiroute" ">*@
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" ng-click="vm.toggleCollapse()">
+                @*<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">*@
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse" style="overflow:hidden!important;" uib-collapse="vm.isCollapsed">
+            @*<div class="navbar-collapse collapse">*@
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+    <script src="~/app/services/ajaxService.js" asp-append-version="true"></script>
+    <script src="~/app/services/alertService.js" asp-append-version="true"></script>
+
+    @*@Scripts.Render("~/bundles/jquery")*@
+    @*@Scripts.Render("~/bundles/bootstrap")*@
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>
