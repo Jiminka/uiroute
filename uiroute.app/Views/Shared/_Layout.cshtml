@@ -13,21 +13,32 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     <base href="@baseUrl" name="base" />
 
-    <link rel="stylesheet" href="~/content/bootstrap.css" />
+    <link rel="stylesheet" href="~/bower_components/bootstrap/bootstrap.css" />
     <link rel="stylesheet" href="~/content/Site.css" />
-    <link rel="stylesheet" href="~/app/content/ui-grid.css" />
-    <link rel="stylesheet" href="~/app/content/angular-block-ui.css" />
+    @*<link rel="stylesheet" href="~/app/content/ui-grid.css" />*@
+    <link rel="stylesheet" href="~/bower_components/angular-ui-grid/ui-grid.css" />
+
+   <link rel="stylesheet" href="~/app/content/angular-block-ui.css" />
 
     @*<script src="~/app/js/angular.js"></script>*@
-    <script src="~/app/bowerjs/angular.js"></script>
+    @*<script src="~/app/bowerjs/angular.js"></script>*@
+    <script src="~/bower_components/angular/angular.js"></script>
+
    <script src="~/app/js/ui-bootstrap.js"></script>
     <script src="~/app/js/angular-ui-router.js"></script>
 
+    <script src="~/bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+    <script src="~/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+
+
     @*<script src="~/app/js/angular-animate.js"></script>*@ @*causes customfilter error*@
-    <script src="~/app/bowerjs/angular-animate/angular-animate.js"></script>
+    @*<script src="~/app/bowerjs/angular-animate/angular-animate.js"></script>*@
+    <script src="~/bower_components/angular-animate/angular-animate.js"></script>
 
      <script src="~/app/js/ui-bootstrap-tpls.js"></script>
-    <script src="~/app/bowerjs/angular-ui-grid/ui-grid.js"></script>
+    @*<script src="~/app/bowerjs/angular-ui-grid/ui-grid.js"></script>*@
+    <script src="~/bower_components/angular-ui-grid/ui-grid.js"></script>
+
     <script src="~/app/bowerjs/pdfmake/pdfmake.js"></script>
     <script src="~/app/bowerjs/pdfmake/vfs_fonts.js"></script>
     <script src="~/app/bowerjs/csv/csv.js"></script>
@@ -38,6 +49,7 @@
     <script src="~/app/app.config.js"></script>
     <script src="~/app/CarController.js"></script>
     <script src="~/app/gridController.js"></script>
+    <script src="~/app/test/tab/tabcontroller.js"></script>
 
 
 </head>
@@ -73,6 +85,7 @@
     </div>
     <script src="~/app/services/ajaxService.js" asp-append-version="true"></script>
     <script src="~/app/services/alertService.js" asp-append-version="true"></script>
+    <script src="~/app/services/tab.service.js" asp-append-version="true"></script>
 
     @*@Scripts.Render("~/bundles/jquery")*@
     @*@Scripts.Render("~/bundles/bootstrap")*@

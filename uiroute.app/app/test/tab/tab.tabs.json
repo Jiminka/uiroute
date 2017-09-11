@@ -1,0 +1,22 @@
+﻿[
+
+  {
+    "title": "grid",
+    "route": "home.tab.grid",
+    "content": "Tab 1 Content",
+    "disable": false,
+    "show": true,
+    "index": "0"
+  },
+
+
+  {
+    "title": "Farms",
+    "route": "tab.farms",
+    "content": "Tab 2 Content",
+    "disable": false,
+    "show": true,
+    "index": "1"
+  }
+
+]
