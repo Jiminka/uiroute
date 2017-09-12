@@ -15,7 +15,9 @@
         'ui.grid',
         'ui.grid.exporter',
         'ui.grid.selection',
-        'blockUI' // see note appmodule.txt
+        'ui.tab.scroll',
+        'ngSanitize',
+      'blockUI' // see note appmodule.txt
 
    ]);
 

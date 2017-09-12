@@ -17,6 +17,32 @@
     "disable": false,
     "show": true,
     "index": "1"
+  },
+
+  {
+    "title": "Farms2",
+    "route": "tab.farms2",
+    "content": "Tab 2 Content",
+    "disable": false,
+    "show": true,
+    "index": "2"
+  },
+  {
+    "title": "Farms3",
+    "route": "tab.farms3",
+    "content": "Tab 2 Content",
+    "disable": false,
+    "show": true,
+    "index": "3"
+  },
+  {
+    "title": "Farms4",
+    "route": "tab.farms4",
+    "content": "Tab 2 Content",
+    "disable": false,
+    "show": true,
+    "index": "4"
   }
+
 
 ]
