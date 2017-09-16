@@ -43,10 +43,10 @@
             onRegisterApi: function (gridApi) {
                 $scope.gridApi = gridApi;
             },
-            data: [
-                { "firstName": "Cox", "lastName": "Carney", "providerName": 'data[0].providerName '},
-                { "firstName": "Jim", "lastName": "Sullivan", "providerName": "ypg" }
-            ],
+            //data: [
+            //    { "firstName": "Cox", "lastName": "Carney", "providerName": 'data[0].providerName '},
+            //    { "firstName": "Jim", "lastName": "Sullivan", "providerName": "ypg" }
+            //],
             columnDefs: [
                 { name: 'first1', field: 'firstName' },
                 { name: 'last', field: 'lastName' },
@@ -54,6 +54,10 @@
             ]
         };
 
+        $scope.gridOpts.data = [
+            { "firstName": "Cox", "lastName": "Carney", "providerName": 'data[0].providerName ' },
+            { "firstName": "Jim", "lastName": "Sullivan", "providerName": "ypg" }
+        ];
 
         //ajaxService.ajaxGet('api/PoultryFeed/GetProviders')
         //    .then(function (response) {

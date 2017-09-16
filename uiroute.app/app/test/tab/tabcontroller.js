@@ -39,7 +39,15 @@
             $state.go(route);
         };
 
+        vm.active = function (route) {
+            return $state.is(route);
+        };
 
+        //$scope.$on("$stateChangeSuccess", function () {
+        //    $scope.tabs.forEach(function (tab) {
+        //        tab.active = $scope.active(tab.route);
+        //    });
+        //});
 
 
 
